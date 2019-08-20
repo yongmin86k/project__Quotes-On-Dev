@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-	color: $color__text-main;
+	color: $color__white;
 	font-family: $font__main;
 	font-size: 1rem;
 	line-height: $font__line-height-body;
@@ -38,7 +38,7 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background: $color__bg-pre;
 	font-family: $font__pre;
 	font-size: .9375rem;
 	line-height: $font__line-height-pre;
@@ -59,7 +59,7 @@ abbr, acronym {
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background: $color__bg-ins;
 	text-decoration: none;
 }
 
