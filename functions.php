@@ -56,13 +56,17 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
+	wp_enqueue_style( 'fonts-exo', 'https://fonts.googleapis.com/css?family=Exo:300,300i,500,500i&display=swap' );
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
 	
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/8ddc296b1b.js', array(), false, false );
+
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'qod-script', get_template_directory_uri() .'/build/js/script.min.js', array('jquery'), false, true );
+	
 
 	wp_localize_script('qod-script', 'qod_api', array(
-		
+
 	));
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
