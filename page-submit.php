@@ -3,6 +3,8 @@
  * The template for displaying all pages.
  *
  * @package QOD_Starter_Theme
+ * 
+ * Template Name: Submit
  */
 
 get_header(); ?>

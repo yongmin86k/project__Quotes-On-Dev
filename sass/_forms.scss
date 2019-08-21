@@ -9,6 +9,10 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	@include form-styles();
+
+	.page-template-page-submit & {
+		display: block;
+	}
 }
 
 .search-icon {
@@ -29,6 +33,10 @@ input[type="password"],
 input[type="search"],
 textarea {
 	@include form-styles(.5rem, .5rem);
+
+	.page-template-page-submit & {
+		display: block;
+	}
 }
 
 textarea {

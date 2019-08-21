@@ -35,7 +35,6 @@
 }
 
 /* All Archives Page */
-
 .archive {
     .site-main > * {
         padding-bottom: $base__space-unit;
@@ -51,4 +50,16 @@
         border-bottom: $base__border;
     }
 }
+
 /* Submit a Quote Page */
+.page-template-page-submit {
+    .quote-submission-wrapper {
+        form > div {
+            margin-bottom: $base__space-unit;
+
+            input, textarea {
+                margin-top: $base__space-unit / 3;
+            }
+        }
+    }
+}

@@ -408,6 +408,11 @@ input[type="submit"] {
   input[type="submit"]:focus {
     color: #009900;
     border-color: #009900; }
+  .page-template-page-submit button, .page-template-page-submit
+  input[type="button"], .page-template-page-submit
+  input[type="reset"], .page-template-page-submit
+  input[type="submit"] {
+    display: block; }
 
 .search-icon {
   border: none solid transparent;
@@ -451,6 +456,13 @@ textarea {
   textarea:focus {
     color: #009900;
     border-color: #009900; }
+  .page-template-page-submit input[type="text"], .page-template-page-submit
+  input[type="email"], .page-template-page-submit
+  input[type="url"], .page-template-page-submit
+  input[type="password"], .page-template-page-submit
+  input[type="search"], .page-template-page-submit
+  textarea {
+    display: block; }
 
 textarea {
   width: 100%; }
@@ -683,3 +695,7 @@ object {
   border-bottom: 1px dotted #fff; }
 
 /* Submit a Quote Page */
+.page-template-page-submit .quote-submission-wrapper form > div {
+  margin-bottom: 1.5rem; }
+  .page-template-page-submit .quote-submission-wrapper form > div input, .page-template-page-submit .quote-submission-wrapper form > div textarea {
+    margin-top: 0.5rem; }
