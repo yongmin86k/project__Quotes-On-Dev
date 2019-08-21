@@ -88,7 +88,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold; }
+  font-weight: 500; }
 
 dfn {
   font-style: italic; }
@@ -208,7 +208,7 @@ textarea {
   overflow: auto; }
 
 optgroup {
-  font-weight: bold; }
+  font-weight: 500; }
 
 table {
   border-collapse: collapse;
@@ -221,6 +221,30 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../fonts/Exo-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Medium.woff2") format("woff2"), url("../../fonts/Exo-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Light.woff2") format("woff2"), url("../../fonts/Exo-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-LightItalic.woff2") format("woff2"), url("../../fonts/Exo-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -327,7 +351,7 @@ li > ol {
   margin-left: 1.5rem; }
 
 dt {
-  font-weight: bold; }
+  font-weight: 500; }
 
 dd {
   margin: 0 1.5rem 1.5rem; }
@@ -351,17 +375,13 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  background-color: transparent;
+  border: 2px solid #00cc00;
   border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  color: #00cc00;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: .5rem 2.25rem; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -510,7 +530,7 @@ a {
     color: #21759b;
     display: block;
     font-size: .875rem;
-    font-weight: bold;
+    font-weight: 500;
     height: auto;
     left: 5px;
     line-height: normal;
