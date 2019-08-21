@@ -23,7 +23,7 @@ function qod_register_metaboxes() {
 		'id'            => $prefix . 'quote_metabox',
 		'title'         => 'Quotes Meta',
 		'object_types'  => array( 'post', ), // Post type
-		'context'    => 'normal',
+		'context'    => 'normal', //  'normal', 'advanced', or 'side'
 		'priority'   => 'high',
 		'show_names' => true, // Show field names on the left
 	) );

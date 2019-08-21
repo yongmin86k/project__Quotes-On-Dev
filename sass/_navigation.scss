@@ -34,12 +34,13 @@ a {
 
 	ul {
 		display: flex;
+		flex-wrap: wrap;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 		li {
 			position: relative;
-			padding: 0 1rem;
+			padding: 0 .8rem;
 			&::after {
 				position: absolute;
 				content: '';

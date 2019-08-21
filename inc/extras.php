@@ -47,3 +47,26 @@ function qod_remove_submenus() {
     remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
 }
 add_action( 'admin_menu', 'qod_remove_submenus', 110 );
+
+/**
+ * Modify the default WP query to show a random post and only 1
+ */
+function qod_modify_archives( $query ) {
+    // modify the blog index and single posts
+    if( 
+        ( is_home() || is_single() ) 
+        && !is_admin() && $query -> is_main_query()
+    ) {
+        $query->set( 'orderby', 'rand' );
+        $query->set( 'posts_per_page', 1 );
+    }
+
+    // modify categories and defalt archives
+    if(  
+        is_archive() && !is_admin() && $query -> is_main_query()
+    )
+    {
+        $query->set( 'posts_per_page', 5 );
+    }
+}
+add_action( 'pre_get_posts', 'qod_modify_archives' );
