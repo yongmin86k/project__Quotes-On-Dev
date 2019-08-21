@@ -524,9 +524,9 @@ ul, ol {
     text-decoration: none; }
 
 /* Pagination */
-.nav-links > * {
+.nav-links > *, .number-pagination > * {
   padding: 0 .25rem; }
-  .nav-links > *:first-child {
+  .nav-links > *:first-child, .number-pagination > *:first-child {
     padding-left: 0; }
 
 /*--------------------------------------------------------------
@@ -673,10 +673,13 @@ object {
         align-content: flex-end; }
 
 /* All Archives Page */
-.archive .site-main > *, .search .site-main > * {
+.archive .site-main > * {
   padding-bottom: 1.5rem;
   border-bottom: 1px dotted #fff; }
-  .archive .site-main > *:last-child, .search .site-main > *:last-child {
+  .archive .site-main > *:last-child {
     border-bottom: none; }
+
+.search .page-header {
+  border-bottom: 1px dotted #fff; }
 
 /* Submit a Quote Page */

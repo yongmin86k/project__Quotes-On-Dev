@@ -36,7 +36,7 @@
 
 /* All Archives Page */
 
-.archive, .search {
+.archive {
     .site-main > * {
         padding-bottom: $base__space-unit;
         border-bottom: $base__border;
@@ -46,4 +46,9 @@
     }
 }
 
+.search {
+    .page-header {
+        border-bottom: $base__border;
+    }
+}
 /* Submit a Quote Page */
