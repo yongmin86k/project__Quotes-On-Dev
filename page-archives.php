@@ -3,6 +3,8 @@
  * The template for displaying all pages.
  *
  * @package QOD_Starter_Theme
+ * 
+ * Template Name: Archives
  */
 
 get_header(); ?>
@@ -19,7 +21,15 @@ get_header(); ?>
 					<h2>Quote Authors</h2>
 					<ul>
 						<?php 
-							$posts =  get_posts( 'posts_per_page=-1' );
+							$query = array(
+								'posts_per_page'=> -1,
+								'orderby'=> array(
+									'post_title'=>'ASC'
+								)
+							);
+							
+							$posts =  get_posts( $query );
+
 							foreach( $posts as $post ) : setup_postdata( $post );
 						?>	
 

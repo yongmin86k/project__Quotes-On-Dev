@@ -266,6 +266,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 1.25rem; }
+  .page-template-page-archives h2 {
+    margin-top: 3rem;
+    font-size: 1.5rem; }
 
 /* Copy */
 p {
@@ -451,6 +454,22 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+/* Lists */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .page-template-page-archives ul, .page-template-page-archives ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  ul li, ol li {
+    margin-bottom: 0.75rem; }
+    .page-template-page-archives ul li, .page-template-page-archives ol li {
+      margin-right: 1.5rem; }
+
 /* Menus */
 .main-navigation {
   display: block;
@@ -467,6 +486,7 @@ a {
     padding-left: 0; }
     .main-navigation ul li {
       position: relative;
+      margin: 0;
       padding: 0 .8rem; }
       .main-navigation ul li::after {
         position: absolute;

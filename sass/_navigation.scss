@@ -25,6 +25,27 @@ a {
 	}
 }
 
+
+/* Lists */
+
+ul, ol {
+	list-style: none;
+	margin: 0; padding: 0;
+
+	.page-template-page-archives & {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	li {
+		margin-bottom: $base__space-unit / 2;
+
+		.page-template-page-archives & {
+			margin-right: $base__space-unit;
+		}
+	}
+}
+
 /* Menus */
 
 .main-navigation {
@@ -40,6 +61,7 @@ a {
 		padding-left: 0;
 		li {
 			position: relative;
+			margin: 0;
 			padding: 0 .8rem;
 			&::after {
 				position: absolute;
