@@ -56,7 +56,6 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
-	wp_enqueue_style( 'fonts-exo', 'https://fonts.googleapis.com/css?family=Exo:300,300i,500,500i&display=swap' );
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/8ddc296b1b.js', array(), false, false );

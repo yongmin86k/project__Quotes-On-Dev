@@ -6,6 +6,7 @@
 
 a {
 	color: $color__link;
+	text-decoration: none;
 
 	&:visited {
 		color: $color__link-visited;
@@ -27,106 +28,43 @@ a {
 /* Menus */
 
 .main-navigation {
-	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
+	margin-bottom: 1rem;
 
 	ul {
-		display: none;
+		display: flex;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
-
-			ul {
-				left: -999rem;
-				top: 0;
+		li {
+			position: relative;
+			padding: 0 1rem;
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0; right: 0;
+				width: 1px;
+				height: 100%;
+				border-right: 1px solid $white;
 			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
+			&:nth-child(1){
+				padding-left: 0;
+			}
+			&:last-child{
+				padding-right: 0;
+				&::after {
+					display: none;
 				}
 			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
 		}
 	}
-	li {
-		float: left;
-		position: relative;
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
+	
+
 	a {
 		display: block;
 		text-decoration: none;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
 }
