@@ -83,11 +83,19 @@ ul, ol {
 		}
 	}
 
-	
-
 	a {
 		display: block;
 		text-decoration: none;
 	}
 
+}
+
+/* Pagination */
+.nav-links {
+	& > * {
+		padding: 0 .25rem;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
 }

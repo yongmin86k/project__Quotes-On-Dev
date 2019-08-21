@@ -36,4 +36,14 @@
 
 /* All Archives Page */
 
+.archive, .search {
+    .site-main > * {
+        padding-bottom: $base__space-unit;
+        border-bottom: $base__border;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
 /* Submit a Quote Page */
