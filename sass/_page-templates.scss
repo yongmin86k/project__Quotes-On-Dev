@@ -16,19 +16,17 @@
 
     &-header {
         flex: none;
-        margin: $base__space-unit*2 0;    
+        margin: $base__space-unit*2 0 $base__space-unit 0;    
         .site-logo {
             width: 80%;
         }
     } // end .site-header
     &-content {
         flex: none;
-        h2, p {
-            font-size: 1.25rem;
-        }
     } // end .site-content
     &-footer {
         flex: 1 1 auto;
+        margin-top: $base__space-unit;
         padding: $base__space-unit 0;
         display: flex;
         flex-wrap: wrap;

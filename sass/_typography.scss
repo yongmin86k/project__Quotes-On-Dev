@@ -18,13 +18,20 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-weight: 300;
+	font-weight: 500;
+}
+h2 {
+	font-size: 1.25rem;
 }
 
 /* Copy */
 
 p {
 	margin-bottom: $base__space-unit;
+	.archive &, .blog &, .single & {
+		font-size: 1.25rem;
+	}
+
 }
 
 dfn, cite, em, i {
@@ -67,4 +74,8 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+.source {
+	font-style: italic;
 }
