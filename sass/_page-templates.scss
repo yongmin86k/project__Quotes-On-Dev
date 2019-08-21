@@ -2,6 +2,18 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* General */
+.site {
+    padding: $base__space-unit/2;
+}
+.site-header {
+    margin: $base__space-unit*2 0;
+    .site-logo {
+        width: 80%;
+    }
+}
+
+
 /* All Archives Page */
 
 /* Submit a Quote Page */

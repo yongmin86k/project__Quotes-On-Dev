@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $color__bg; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote,
@@ -63,6 +63,7 @@ dd {
 }
 
 img {
+  display: block;
   height: auto; /* Make sure images are scaled correctly. */
   max-width: 100%; /* Adhere to container width. */
 }

@@ -8,11 +8,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div>
+		<div class="entry-meta">
+			<h2 class="author">- <?php the_title(); ?></h2> <span class="source"></span>
+		</div>
+		
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
+
+<button type="button" class="btn-new-quote">Show Me Another!</button>
