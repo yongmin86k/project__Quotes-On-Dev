@@ -8,23 +8,15 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: transparent;
-    border: 2px solid $color__brand-main;
-    border-radius: 3px;
-    color: $color__brand-main;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: .5rem 2.25rem;
+	@include form-styles();
+}
 
-	&:hover {
-		color: $color__link-hover;
-		border-color: $color__link-hover;
-	}
-
-	&:active,
-	&:focus {
-		color: $color__link-hover;
-		border-color: $color__link-hover;
+.search-icon {
+	border: none solid transparent;
+	padding-right: .5rem;
+	padding-left: .5rem;
+	& i {
+		color: $color__brand-main;
 	}
 }
 
@@ -36,24 +28,9 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-
-	&:focus {
-		color: #111;
-	}
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-	padding: 3px;
+	@include form-styles(.5rem, .5rem);
 }
 
 textarea {
-	padding-left: 3px;
 	width: 100%;
 }

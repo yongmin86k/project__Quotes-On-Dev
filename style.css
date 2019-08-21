@@ -392,7 +392,7 @@ input[type="submit"] {
   color: #00cc00;
   font-size: 1rem;
   font-weight: 500;
-  padding: .5rem 2.25rem; }
+  padding: 0.5rem 2.25rem; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
@@ -409,6 +409,13 @@ input[type="submit"] {
     color: #009900;
     border-color: #009900; }
 
+.search-icon {
+  border: none solid transparent;
+  padding-right: .5rem;
+  padding-left: .5rem; }
+  .search-icon i {
+    color: #00cc00; }
+
 /* Fields */
 input[type="text"],
 input[type="email"],
@@ -416,26 +423,36 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
+  background-color: transparent;
+  border: 2px solid #00cc00;
+  border-radius: 3px;
+  color: #00cc00;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0.5rem; }
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="url"]:hover,
+  input[type="password"]:hover,
+  input[type="search"]:hover,
+  textarea:hover {
+    color: #009900;
+    border-color: #009900; }
+  input[type="text"]:active, input[type="text"]:focus,
+  input[type="email"]:active,
   input[type="email"]:focus,
+  input[type="url"]:active,
   input[type="url"]:focus,
+  input[type="password"]:active,
   input[type="password"]:focus,
+  input[type="search"]:active,
   input[type="search"]:focus,
+  textarea:active,
   textarea:focus {
-    color: #111; }
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-  padding: 3px; }
+    color: #009900;
+    border-color: #009900; }
 
 textarea {
-  padding-left: 3px;
   width: 100%; }
 
 /*--------------------------------------------------------------
