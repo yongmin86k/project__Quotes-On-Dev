@@ -3,16 +3,25 @@
 --------------------------------------------------------------*/
 
 /* General */
-.site {
-    padding: $base__space-unit/2;
-}
-.site-header {
-    margin: $base__space-unit*2 0;
-    .site-logo {
-        width: 80%;
-    }
+* {
+    font-family: $font__main;
+    color: $white;
 }
 
+.site {
+    padding: $base__space-unit/2;
+    &-header {
+        margin: $base__space-unit*2 0;    
+        .site-logo {
+            width: 80%;
+        }
+    } // end .site-header
+    &-content {
+        h2, p {
+            font-size: 1.25rem;
+        }
+    } // end .site-content
+}
 
 /* All Archives Page */
 

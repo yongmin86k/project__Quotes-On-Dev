@@ -7,9 +7,10 @@ button,
 input,
 select,
 textarea {
-	color: $color__white;
+	color: $white;
 	font-family: $font__main;
 	font-size: 1rem;
+	font-weight: 300;
 	line-height: $font__line-height-body;
 }
 
@@ -17,6 +18,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-weight: 300;
 }
 
 /* Copy */

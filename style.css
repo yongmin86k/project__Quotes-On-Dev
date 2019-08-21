@@ -232,11 +232,13 @@ textarea {
   color: #fff;
   font-family: "Exo", sans-serif;
   font-size: 1rem;
+  font-weight: 300;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-weight: 300; }
 
 /* Copy */
 p {
@@ -593,13 +595,18 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* General */
+* {
+  font-family: "Exo", sans-serif;
+  color: #fff; }
+
 .site {
   padding: 0.75rem; }
-
-.site-header {
-  margin: 3rem 0; }
-  .site-header .site-logo {
-    width: 80%; }
+  .site-header {
+    margin: 3rem 0; }
+    .site-header .site-logo {
+      width: 80%; }
+  .site-content h2, .site-content p {
+    font-size: 1.25rem; }
 
 /* All Archives Page */
 /* Submit a Quote Page */

@@ -14,7 +14,7 @@
 			<?php the_content(); ?>
 		</div>
 		<div class="entry-meta">
-			<h2 class="author">- <?php the_title(); ?></h2> <span class="source"></span>
+			<h2 class="author">— <?php the_title(); ?></h2> <span class="source"></span>
 		</div>
 		
 	</div><!-- .entry-content -->
