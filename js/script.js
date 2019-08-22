@@ -80,7 +80,7 @@
                 console.log(err);
             })
             .done(function(){
-                $('.quote-submission-wrapper').html('Thanks,  your quote submission was received!');
+                $('.quote-submission-wrapper').html('Thanks, your quote submission was received!');
             });
         });
     });

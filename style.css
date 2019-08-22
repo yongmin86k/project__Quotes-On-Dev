@@ -469,7 +469,7 @@ textarea {
 
 @media only screen and (min-width: 620px) {
   input {
-    width: 36%; }
+    width: 48%; }
     input[type="submit"] {
       width: auto; } }
 
@@ -680,6 +680,10 @@ object {
   @media only screen and (min-width: 620px) {
     .site {
       padding: 1.5rem; } }
+  @media only screen and (min-width: 1080px) {
+    .site {
+      width: 720px;
+      margin: 0 auto; } }
   .site-header {
     -webkit-box-flex: 0;
         -ms-flex: none;
@@ -690,10 +694,33 @@ object {
       @media only screen and (min-width: 620px) {
         .site-header .site-logo {
           width: 32rem; } }
+      @media only screen and (min-width: 1080px) {
+        .site-header .site-logo {
+          width: 100%; } }
   .site-content {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none; }
+    @media only screen and (min-width: 1080px) {
+      .site-content {
+        position: relative; }
+        .site-content::after, .site-content::before {
+          position: absolute;
+          top: 0;
+          font-family: FontAwesome;
+          font-size: 5rem;
+          color: #00cc00; }
+        .site-content::after {
+          content: '\f10e';
+          right: -8rem; }
+        .site-content::before {
+          content: '\f10d';
+          left: -8rem; }
+        .site-content .post .entry-content p {
+          font-size: 2.5rem; }
+        .site-content button {
+          display: block;
+          margin: 0 auto; } }
   .site-footer {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
@@ -714,7 +741,10 @@ object {
                 flex: 0 1  auto;
         margin-top: 4.5rem;
         -ms-flex-line-pack: start;
-            align-content: flex-start; } }
+            align-content: flex-start;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; } }
 
 /* All Archives Page */
 .archive .site-main > * {
