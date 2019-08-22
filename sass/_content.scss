@@ -10,6 +10,9 @@
 
 .hentry {
 	margin: 0 0 $base__space-unit;
+	@include tablet {
+		margin-bottom: $base__space-unit*2;
+	}
 }
 
 .updated:not(.published){

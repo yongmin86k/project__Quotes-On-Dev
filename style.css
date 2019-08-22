@@ -467,6 +467,12 @@ textarea {
 textarea {
   width: 100%; }
 
+@media only screen and (min-width: 620px) {
+  input {
+    width: 36%; }
+    input[type="submit"] {
+      width: auto; } }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -504,6 +510,10 @@ ul, ol {
   display: block;
   width: 100%;
   margin-bottom: 1rem; }
+  @media only screen and (min-width: 620px) {
+    .main-navigation {
+      width: auto;
+      padding-right: .8rem; } }
   .main-navigation ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -531,6 +541,11 @@ ul, ol {
         padding-right: 0; }
         .main-navigation ul li:last-child::after {
           display: none; }
+        @media only screen and (min-width: 620px) {
+          .main-navigation ul li:last-child {
+            padding-right: .8rem; }
+            .main-navigation ul li:last-child::after {
+              display: block; } }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -607,6 +622,9 @@ ul, ol {
 
 .hentry {
   margin: 0 0 1.5rem; }
+  @media only screen and (min-width: 620px) {
+    .hentry {
+      margin-bottom: 3rem; } }
 
 .updated:not(.published) {
   display: none; }
@@ -659,6 +677,9 @@ object {
           flex-direction: column;
   padding: 0.75rem;
   min-height: 100vh; }
+  @media only screen and (min-width: 620px) {
+    .site {
+      padding: 1.5rem; } }
   .site-header {
     -webkit-box-flex: 0;
         -ms-flex: none;
@@ -666,6 +687,9 @@ object {
     margin: 3rem 0 1.5rem 0; }
     .site-header .site-logo {
       width: 80%; }
+      @media only screen and (min-width: 620px) {
+        .site-header .site-logo {
+          width: 32rem; } }
   .site-content {
     -webkit-box-flex: 0;
         -ms-flex: none;
@@ -683,6 +707,14 @@ object {
         flex-wrap: wrap;
     -ms-flex-line-pack: end;
         align-content: flex-end; }
+    @media only screen and (min-width: 620px) {
+      .site-footer {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1  auto;
+                flex: 0 1  auto;
+        margin-top: 4.5rem;
+        -ms-flex-line-pack: start;
+            align-content: flex-start; } }
 
 /* All Archives Page */
 .archive .site-main > * {

@@ -42,3 +42,12 @@ textarea {
 textarea {
 	width: 100%;
 }
+
+input {
+	@include tablet {
+		width: 36%;
+		&[type="submit"]{
+			width: auto;
+		}
+	}
+}

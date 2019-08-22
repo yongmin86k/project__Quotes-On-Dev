@@ -1,4 +1,16 @@
-// Center block
+// mixins
+@mixin tablet {
+    @media only screen and (min-width: $width-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $width-desktop) {
+        @content;
+    }
+}
+
 @mixin center-block {
 	display: block;
 	margin-left: auto;

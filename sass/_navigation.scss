@@ -52,6 +52,10 @@ ul, ol {
 	display: block;
 	width: 100%;
 	margin-bottom: 1rem;
+	@include tablet {
+		width: auto;
+		padding-right: .8rem;
+	}
 
 	ul {
 		display: flex;
@@ -78,6 +82,12 @@ ul, ol {
 				padding-right: 0;
 				&::after {
 					display: none;
+				}
+				@include tablet {
+					padding-right: .8rem;
+					&::after {
+						display: block;
+					}
 				}
 			}
 		}

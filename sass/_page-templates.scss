@@ -12,6 +12,10 @@
     display: flex;
     flex-direction: column;
     padding: $base__space-unit/2;
+    @include tablet {
+        padding: $base__space-unit;
+    }
+
     min-height: 100vh;
 
     &-header {
@@ -19,6 +23,9 @@
         margin: $base__space-unit*2 0 $base__space-unit 0;    
         .site-logo {
             width: 80%;
+            @include tablet {
+                width: 32rem;
+            }
         }
     } // end .site-header
     &-content {
@@ -31,6 +38,12 @@
         display: flex;
         flex-wrap: wrap;
         align-content: flex-end;
+
+        @include tablet {
+            flex: 0 1  auto;
+            margin-top: $base__space-unit*3;
+            align-content: flex-start;
+        }
     }
 }
 
