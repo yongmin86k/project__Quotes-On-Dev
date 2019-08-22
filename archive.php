@@ -27,13 +27,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php
-				the_posts_pagination( array(
-					'mid_size' => 1,
-					'prev_text' => __( '&#8592; Previous', 'textdomain' ),
-					'next_text' => __( 'Next &#8594;', 'textdomain' ),
-				) );
-			?>
+			<?php qod_numbered_pagination(); ?>
 
 		<?php else : ?>
 
