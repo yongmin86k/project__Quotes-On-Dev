@@ -66,7 +66,8 @@ function qod_scripts() {
 
 	wp_localize_script('qod-script', 'qod_api', array(
 		'rest_url' => esc_url_raw( rest_url() ),
-		'wpapi_nonce' => wp_create_nonce( 'wp_rest' )
+		'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
+		'home_url' => esc_url_raw( home_url() )
 	));
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );

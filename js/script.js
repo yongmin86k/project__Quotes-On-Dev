@@ -1,13 +1,14 @@
 (function($){
 
     $(function(){
-        // console.log(qod_api);
 
-        // TODO :
+        let lastPage = '';
 
         // 1. Get request for wp/v2/posts
         $('#new-quote-button').on('click', function (event) {
             event.preventDefault();
+
+            lastPage = document.URL;
 
             $.ajax({
                 method: 'get',
@@ -17,18 +18,23 @@
                 console.log(err);
             })
             .done(function (data) {  
-                const $element = $('.entry-content');
-                const $content = data[0].content.rendered;
-                const $title = $('.entry-title');
-                const $author = data[0].title.rendered;
-                let $source, $sourceUrl;
+                const post = data[0];
+                const slug = data[0].slug;
+                const url = `${qod_api.home_url}/${slug}/`;
+                history.pushState(null, null, url);
 
+                const $element = $('.entry-content');
+                const $content = post.content.rendered;
+                const $title = $('.entry-title');
+                const $author = post.title.rendered;
+                let $source, $sourceUrl;
+            
                 $element.html( $content );
 
-                if ( data[0]._qod_quote_source && 
-                     data[0]._qod_quote_source_url ){
-                        $source = data[0]._qod_quote_source;
-                        $sourceUrl = data[0]._qod_quote_source_url;
+                if ( post._qod_quote_source && 
+                    post._qod_quote_source_url ){
+                        $source = post._qod_quote_source;
+                        $sourceUrl = post._qod_quote_source_url;
                         
                         $title.html( `
                         — <span class="author">${$author}</span>, 
@@ -37,8 +43,8 @@
                             ${$source}
                             </a>
                         </span>` );
-                    } else if( data[0]._qod_quote_source ){
-                        $source = data[0]._qod_quote_source;
+                    } else if( post._qod_quote_source ){
+                        $source = post._qod_quote_source;
                         $title.html(`
                             — <span class="author">${$author}</span>, 
                             <span class="source">
@@ -67,6 +73,7 @@
                 method: 'post',
                 url: qod_api.rest_url + 'wp/v2/posts',
                 data: {
+                    'status': 'publish',
                     'title': $valAuthor,
                     'content': $valContent,
                     '_qod_quote_source':$valSource,
@@ -80,8 +87,15 @@
                 console.log(err);
             })
             .done(function(){
-                $('.quote-submission-wrapper').html('Thanks, your quote submission was received!');
+                $('#quote-submission-form').slideUp(400, function(){
+                    $('.quote-submission-wrapper').html('Thanks, your quote submission was received!');
+
+                })
             });
+        });
+
+        $(window).on('popstate', function(){
+            window.location.replace(lastPage);
         });
     });
 
