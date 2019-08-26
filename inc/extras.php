@@ -61,7 +61,7 @@ function qod_modify_archives( $query ) {
         $query->set( 'posts_per_page', 1 );
     }
 
-    // modify categories and defalt archives
+    // modify categories and default archives
     if(  
         is_archive() && !is_admin() && $query -> is_main_query()
     )
