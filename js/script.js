@@ -91,12 +91,14 @@
                 }
             })
             .fail(function(err){
-                console.log(err);
+                $('#quote-submission-form').slideUp(timeAnimate, function(){
+                    $('.quote-submission-wrapper').html('There is something wrong. Please try again.');
+                    $('.quote-submission-wrapper').append(`<pre>${err}</pre>`)
+                })
             })
             .done(function(){
                 $('#quote-submission-form').slideUp(timeAnimate, function(){
                     $('.quote-submission-wrapper').html('Thanks, your quote submission was received!');
-
                 })
             });
         });
@@ -135,7 +137,10 @@
                 }
             })
             .fail(function(err){
-                console.log(err);
+                $('#quote-submission-form').slideUp(timeAnimate, function(){
+                    $('#form-new-account').html('There is something wrong. Please try again.');
+                    $('#form-new-account').append(`<pre>${err}</pre>`)
+                })
             })
             .done(function(){
                 alert('New user is successfully created.\nPlease log-in.');
