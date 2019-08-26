@@ -23,6 +23,7 @@ $color__border-abbr: #666;
 $color__link: $color__brand-main;
 $color__link-visited: $color__brand-main;
 $color__link-hover: darken( $color__link, 10% );
+$color__link-hover-bg: lighten( $color__bg, 10%);
 
 // Typography
 $font__main: 'Exo', sans-serif;

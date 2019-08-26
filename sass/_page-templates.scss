@@ -103,4 +103,8 @@
             }
         }
     }
+    .create-new-account {
+        @extend a;
+        cursor: pointer;
+    }
 }

@@ -45,9 +45,27 @@ textarea {
 
 input {
 	@include tablet {
-		width: 48%;
-		&[type="submit"]{
-			width: auto;
+		&:not([type="submit"]){
+			width: 48%;
+		}
+	}
+}
+
+form[name="FormNewAccount"]{
+	display: none;
+	h2 {
+		font-size: 2rem;
+	}
+	div {
+		margin-bottom: $base__space-unit;
+	}
+	input{
+		margin-top: $base__space-unit / 3;
+		&:not([type="submit"]){
+			width: 100%;
+		}
+		&[type="text"]{
+			width: 48%;
 		}
 	}
 }

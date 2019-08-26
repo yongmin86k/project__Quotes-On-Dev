@@ -33,6 +33,7 @@
 
 	&:active,
 	&:focus {
+		background-color: $color__link-hover-bg;
 		color: $color__link-hover;
 		border-color: $color__link-hover;
 	}

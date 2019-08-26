@@ -76,11 +76,12 @@ audio:not([controls]) {
 template {
   display: none; }
 
-a {
+a, .page-template-page-submit .create-new-account {
   background-color: transparent; }
 
-a:active,
-a:hover {
+a:active, .page-template-page-submit .create-new-account:active,
+a:hover,
+.page-template-page-submit .create-new-account:hover {
   outline: 0; }
 
 abbr[title] {
@@ -406,6 +407,7 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
+    background-color: #3c3c3c;
     color: #009900;
     border-color: #009900; }
   .page-template-page-submit button, .page-template-page-submit
@@ -454,6 +456,7 @@ textarea {
   input[type="search"]:focus,
   textarea:active,
   textarea:focus {
+    background-color: #3c3c3c;
     color: #009900;
     border-color: #009900; }
   .page-template-page-submit input[type="text"], .page-template-page-submit
@@ -468,29 +471,45 @@ textarea {
   width: 100%; }
 
 @media only screen and (min-width: 620px) {
-  input {
-    width: 48%; }
-    input[type="submit"] {
-      width: auto; } }
+  input:not([type="submit"]) {
+    width: 48%; } }
+
+form[name="FormNewAccount"] {
+  display: none; }
+  form[name="FormNewAccount"] h2 {
+    font-size: 2rem; }
+  form[name="FormNewAccount"] div {
+    margin-bottom: 1.5rem; }
+  form[name="FormNewAccount"] input {
+    margin-top: 0.5rem; }
+    form[name="FormNewAccount"] input:not([type="submit"]) {
+      width: 100%; }
+    form[name="FormNewAccount"] input[type="text"] {
+      width: 48%; }
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
-a {
+a, .page-template-page-submit .create-new-account {
   color: #00cc00;
   text-decoration: none; }
-  a:visited {
+  a:visited, .page-template-page-submit .create-new-account:visited {
     color: #00cc00; }
-  a:hover, a:focus, a:active {
+  
+  a:hover,
+  .page-template-page-submit .create-new-account:hover, a:focus, .page-template-page-submit .create-new-account:focus, a:active, .page-template-page-submit .create-new-account:active {
     color: #009900; }
-  a:focus {
+  a:focus, .page-template-page-submit .create-new-account:focus {
     outline: thin dotted; }
-  a:hover, a:active {
+  
+  a:hover,
+  .page-template-page-submit .create-new-account:hover, a:active, .page-template-page-submit .create-new-account:active {
     outline: 0; }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -546,7 +565,7 @@ ul, ol {
             padding-right: .8rem; }
             .main-navigation ul li:last-child::after {
               display: block; } }
-  .main-navigation a {
+  .main-navigation a, .main-navigation .page-template-page-submit .create-new-account, .page-template-page-submit .main-navigation .create-new-account {
     display: block;
     text-decoration: none; }
 
@@ -761,3 +780,6 @@ object {
   margin-bottom: 1.5rem; }
   .page-template-page-submit .quote-submission-wrapper form > div input, .page-template-page-submit .quote-submission-wrapper form > div textarea {
     margin-top: 0.5rem; }
+
+.page-template-page-submit .create-new-account {
+  cursor: pointer; }

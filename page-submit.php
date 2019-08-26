@@ -52,9 +52,34 @@ get_header(); ?>
 						Click here to login
 						</a>
 					</p>
+					<p>or
+						<span class="create-new-account">
+							Create a new account
+						</span>
+					</p>
 				<?php endif; ?>
-
 			</section>
+
+			<form name="FormNewAccount" id="form-new-account">
+				<h2>Create a new account</h2>
+				<div>
+					<label for="newAccName">User name</label>
+					<input id="newAccName" type="text" required minLength="4" maxLength="10">
+				</div>
+				<div>
+					<label for="newAccEmail">Email</label>
+					<input id="newAccEmail" type="email" required>
+				</div>
+				<div>
+					<label for="newAccPw">Password</label>
+					<input id="newAccPw" type="password" required minLength="4" maxLength="10">
+				</div>
+				<div>
+					<label for="confirmNewPw">Confirm password</label>
+					<input id="confirmNewPw" type="password" required minLength="4" maxLength="10">
+				</div>
+				<input type="submit" value="Done">
+			</form>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
